@@ -1,5 +1,5 @@
 body {
-    background-color: #f7f7fa;
+    background: linear-gradient(0deg, rgb(242, 246, 255) 0%, rgb(245, 247, 255) 50%, rgb(249, 251, 255) 100%);
     font-family: "Tahoma", serif;
     text-align: center;
     padding-top: 60px;
@@ -65,5 +65,78 @@ input[type="text"] {
 
 #search::placeholder {
     color: #7e95b3;
+    opacity: 1;
+}
+
+/* Body bg for light contrast */
+body-bg {
+    background-color: #f4f5f7;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Toggle container */
+.tab-toggle {
+    max-width: 300px;
+    margin: 40px auto 20px;
+}
+
+.tabs {
+    display: flex;
+    background: #d4d6da; /* that subtle grey pill */
+    border-radius: 999px;
+    position: relative;
+    overflow: hidden;
+    padding: 4px;
+}
+
+/* Tab buttons */
+.tab {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    background: none;
+    color: #555;
+    font-weight: 600;
+    border-radius: 999px;
+    z-index: 1;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.tab.active {
+    color: white;
+}
+
+/* Blue slider */
+.slider {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: calc(50% - 8px);
+    background: #4a90e2;
+    border-radius: 999px;
+    z-index: 0;
+    transition: left 0.3s ease;
+}
+
+/* Content panels */
+.page-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.page-panel {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.page-panel.active {
+    display: block;
     opacity: 1;
 }

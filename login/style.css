@@ -1,5 +1,5 @@
 body {
-    background-color: #f7f7fa;
+    background: linear-gradient(0deg, rgb(242, 246, 255) 0%, rgb(245, 247, 255) 50%, rgb(249, 251, 255) 100%);
     font-family: "Tahoma", serif;
     text-align: center;
     padding-top: 60px;
