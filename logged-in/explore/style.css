@@ -123,3 +123,25 @@ input[type="text"] {
     border-top: 1px solid #aaa;
     opacity: 0.5;
 }
+
+a.button {
+    text-decoration: none;
+    position: absolute;
+    top: 11px;
+    right: 140px;
+    display: inline-block;
+    width: 100px;
+    margin: 20px auto 20px auto;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #d8e2f0;
+    color: #2D5289;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+a.button:hover {
+    background-color: #b6ccea;
+}
