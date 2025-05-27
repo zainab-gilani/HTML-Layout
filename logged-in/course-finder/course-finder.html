@@ -31,5 +31,51 @@
 
 <a href="#" class="button">Saved Matches</a>
 
+<div class="rotating-text">
+    <span id="text"></span>
+    <span id="highlight"></span>
+</div>
+
+<script>
+    const phrases = [
+        "phrase 1",
+        "phrase 2",
+        "phrase 3"
+    ];
+
+    let index = 1;
+    const textElement = document.getElementById("text");
+    const highlightElement = document.getElementById("highlight");
+
+    highlightElement.style.backgroundColor = "#878787";
+
+    function showHighlight() {
+        highlightElement.style.width = 200;
+    }
+
+    function rotateText() {
+        //highlightElement.style.width = 0;
+
+        textElement.style.opacity = 0;
+
+        setTimeout(() => {
+            textElement.textContent = phrases[index];
+            textElement.style.opacity = 1;
+
+            index = (index + 1) % phrases.length;
+
+            setInterval(showHighlight, 1000);
+        }, 500);
+    }
+
+    textElement.textContent = phrases[0];
+    //highlightElement.style.width = 0;
+
+    setInterval(showHighlight, 1000);
+
+    setInterval(rotateText, 3000);
+</script>
+
+
 </body>
 </html>
