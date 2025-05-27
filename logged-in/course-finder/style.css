@@ -136,3 +136,19 @@ a.button {
 a.button:hover {
     background-color: #b6ccea;
 }
+
+.rotating-text {
+    font-size: 0.95rem;
+    font-weight: normal;
+    color: #787f87;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    top: -300px;
+}
+
+.rotating-text span {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
