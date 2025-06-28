@@ -38,7 +38,7 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
-a.button {
+button.button {
     text-decoration: none;
     display: block;
     width: 150px;
@@ -54,7 +54,7 @@ a.button {
     cursor: pointer;
 }
 
-a.button:hover {
+button.button:hover {
     background-color: #b6ccea;
 }
 

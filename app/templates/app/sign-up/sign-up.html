@@ -1,29 +1,35 @@
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="../../../static/app/css/sign-up.css">
+    <link rel="stylesheet" href="{% static 'app/css/sign-up.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Abril Fatface' rel='stylesheet'>
 </head>
 <body>
 
 <h1>UniMatch</h1>
 
-<form>
+<form method="post">
+    {% csrf_token %}
     <label for="username">USERNAME:</label><br>
-    <input type="text" id="username" name="username"><br>
+<!--    <input type="text" id="username" name="username"><br>-->
+    <input id="inputUsername" class="" placeholder="Username" required="" autofocus="" type="text">
 
     <label for="email">EMAIL ADDRESS:</label><br>
-    <input type="text" id="email" name="email"><br>
+<!--    <input type="text" id="email" name="email"><br>-->
+    <input id="inputEmail" class="" placeholder="Email" required="" autofocus="" type="text">
 
     <label for="password">PASSWORD:</label><br>
-    <input type="password" id="password" name="password"><br>
+<!--    <input type="password" id="password" name="password"><br>-->
+    <input id="inputPassword" class="" placeholder="Password" required="" type="password">
 
     <div class="password-note">
         NOTE: Password must be at least 8 characters long.
     </div>
 
-    <a href="../logged-in/course-finder/course-finder.html" class="button">SIGN UP</a>
+<!--    <a href="../logged-in/course-finder/course-finder.html" class="button">SIGN UP</a>-->
+    <button class="button" type="submit">Sign in</button>
 </form>
 
 <div class="extra-options">
@@ -32,6 +38,6 @@
     <p><a href="../guest/course-finder/course-finder.html">CONTINUE AS GUEST</a></p>
 </div>
 
-<img src="../../../static/app/images/sign-up-images/logo.svg" class="logo" alt="logo">
+<img src="{% static 'app/sign-up-images/logo.svg' %}" class="logo" alt="logo">
 </body>
 </html>
